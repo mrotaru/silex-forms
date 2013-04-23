@@ -1,0 +1,5 @@
+The VM will have the following things installed:
+
+* LAMP stack
+* git
+* vim - with Python support, vundle and vdebug
