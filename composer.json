@@ -1,0 +1,6 @@
+{
+    "require": {
+        "silex/silex": "1.0.*@dev",
+        "symfony/form": "2.2.x-dev"
+    }
+}
