@@ -1,8 +1,23 @@
 <?php
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
+$app['debug'] = true;
 
+use Silex\Provider\FormServiceProvider;
+$app->register(new FormServiceProvider());
+
+use Silex\Provider\TranslationServiceProvider;
+$app->register(new TranslationServiceProvider(), array(
+    'translator.messages' => array(),
+));
+
+use Silex\Provider\TwigServiceProvider;
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
+    'twig.path' => __DIR__.'/'
+));
+
+use Symfony\Component\HttpFoundation\Request;
 $app->match('/form', function (Request $request) use ($app) {
     // some default data for when the form is displayed the first time
     $data = array(

@@ -1,6 +1,11 @@
 {
     "require": {
-        "silex/silex": "1.0.*@dev",
-        "symfony/form": "2.2.x-dev"
+        "silex/silex":          "1.0.*@dev",
+        "symfony/validator":    "2.2.*@dev",
+        "symfony/config":       "2.2.*@dev",
+        "symfony/translation":  "2.2.*@dev",
+        "symfony/twig-bridge":  "2.2.*@dev",
+        "symfony/locale":       "2.2.*@dev",
+        "symfony/form":         "2.2.*@dev"
     }
 }
